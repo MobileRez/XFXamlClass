@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Toolbox.MeasurementConverter"
+             Title="Measurement Converter">
+  <StackLayout VerticalOptions="CenterAndExpand" Padding="30" >
+    <Grid HorizontalOptions="Center" >
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+      </Grid.ColumnDefinitions>
+      <Picker Grid.Row="1" Grid.Column="1" x:Name="ConvertFrom" StyleId="ConvertFrom"
+              HorizontalOptions="FillAndExpand">
+        <Picker.Items>
+          <x:String>Kilometer</x:String>
+          <x:String>Meter</x:String>
+          <x:String>Centimeter</x:String>
+          <x:String>Millimeter</x:String>
+          <x:String>Mile</x:String>
+          <x:String>Yard</x:String>
+          <x:String>Foot</x:String>
+          <x:String>Inch</x:String>
+        </Picker.Items>
+      </Picker>
+      <Entry Grid.Row="1" Grid.Column="3" StyleId="FromInput"/>
+      <Picker Grid.Row="3" Grid.Column="1" x:Name="ConvertTo" StyleId="ConvertTo"
+              HorizontalOptions="FillAndExpand">
+        <Picker.Items>
+          <x:String>Kilometer</x:String>
+          <x:String>Meter</x:String>
+          <x:String>Centimeter</x:String>
+          <x:String>Millimeter</x:String>
+          <x:String>Mile</x:String>
+          <x:String>Yard</x:String>
+          <x:String>Foot</x:String>
+          <x:String>Inch</x:String>
+        </Picker.Items>
+      </Picker>
+      <Label Grid.Row="3" Grid.Column="3" StyleId="ConvertedUnit"/>
+    </Grid>
+  </StackLayout>
+</ContentPage>

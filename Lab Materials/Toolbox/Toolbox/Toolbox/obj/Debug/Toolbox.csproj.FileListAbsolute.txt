@@ -1,0 +1,9 @@
+C:\ClassesAndWorkshops\XAML Forms Hands On\Lab Materials\Toolbox\Toolbox\Toolbox\bin\Debug\Toolbox.dll
+C:\ClassesAndWorkshops\XAML Forms Hands On\Lab Materials\Toolbox\Toolbox\Toolbox\bin\Debug\Toolbox.pdb
+C:\ClassesAndWorkshops\XAML Forms Hands On\Lab Materials\Toolbox\Toolbox\Toolbox\bin\Debug\Xamarin.Forms.Core.dll
+C:\ClassesAndWorkshops\XAML Forms Hands On\Lab Materials\Toolbox\Toolbox\Toolbox\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\ClassesAndWorkshops\XAML Forms Hands On\Lab Materials\Toolbox\Toolbox\Toolbox\bin\Debug\Xamarin.Forms.Core.xml
+C:\ClassesAndWorkshops\XAML Forms Hands On\Lab Materials\Toolbox\Toolbox\Toolbox\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\ClassesAndWorkshops\XAML Forms Hands On\Lab Materials\Toolbox\Toolbox\Toolbox\obj\Debug\Toolbox.dll
+C:\ClassesAndWorkshops\XAML Forms Hands On\Lab Materials\Toolbox\Toolbox\Toolbox\obj\Debug\Toolbox.pdb
+C:\ClassesAndWorkshops\XAML Forms Hands On\Lab Materials\Toolbox\Toolbox\Toolbox\obj\Debug\MeasurementConverter.xaml.g.cs
