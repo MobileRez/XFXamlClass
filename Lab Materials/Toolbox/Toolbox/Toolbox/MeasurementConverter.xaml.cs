@@ -13,6 +13,9 @@ namespace Toolbox
         public MeasurementConverter()
         {
             InitializeComponent();
+
+            CfPicker.SelectedIndex = 4;
+            CtPicker.SelectedIndex = 0;
         }
     }
 }

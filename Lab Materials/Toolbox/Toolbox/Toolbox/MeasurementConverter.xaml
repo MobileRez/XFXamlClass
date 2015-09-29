@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Toolbox.MeasurementConverter"
-             Title="Measurement Converter">
+             Title="Measurement Converter"
+             BackgroundColor="#2c3e50">
   <StackLayout VerticalOptions="CenterAndExpand" Padding="30" >
     <Grid HorizontalOptions="Center" >
       <Grid.RowDefinitions>
@@ -16,10 +17,10 @@
         <ColumnDefinition Width="*"/>
         <ColumnDefinition Width="*"/>
         <ColumnDefinition Width="*"/>
-        <ColumnDefinition Width="*"/>
-        <ColumnDefinition Width="*"/>
+        <!--<ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>-->
       </Grid.ColumnDefinitions>
-      <Picker Grid.Row="1" Grid.Column="1" x:Name="ConvertFrom" StyleId="ConvertFrom"
+      <Picker x:Name="CfPicker" Grid.Row="1" Grid.Column="0" StyleId="CfPicker"
               HorizontalOptions="FillAndExpand">
         <Picker.Items>
           <x:String>Kilometer</x:String>
@@ -32,8 +33,9 @@
           <x:String>Inch</x:String>
         </Picker.Items>
       </Picker>
-      <Entry Grid.Row="1" Grid.Column="3" StyleId="FromInput"/>
-      <Picker Grid.Row="3" Grid.Column="1" x:Name="ConvertTo" StyleId="ConvertTo"
+      <Entry x:Name="CfEntry" Grid.Row="1" Grid.Column="2" StyleId="CfEntry" 
+             BackgroundColor="#FFFFFF" TextColor="#000000" Keyboard="Numeric"/>
+      <Picker x:Name="CtPicker" Grid.Row="3" Grid.Column="0" StyleId="CtPicker"
               HorizontalOptions="FillAndExpand">
         <Picker.Items>
           <x:String>Kilometer</x:String>
@@ -46,7 +48,7 @@
           <x:String>Inch</x:String>
         </Picker.Items>
       </Picker>
-      <Label Grid.Row="3" Grid.Column="3" StyleId="ConvertedUnit"/>
+      <Label x:Name="CtLabel" Grid.Row="3" Grid.Column="2" StyleId="CtLabel"/>
     </Grid>
   </StackLayout>
 </ContentPage>

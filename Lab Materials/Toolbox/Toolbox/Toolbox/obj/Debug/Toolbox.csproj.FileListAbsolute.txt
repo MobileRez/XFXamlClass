@@ -7,3 +7,4 @@ C:\ClassesAndWorkshops\XAML Forms Hands On\Lab Materials\Toolbox\Toolbox\Toolbox
 C:\ClassesAndWorkshops\XAML Forms Hands On\Lab Materials\Toolbox\Toolbox\Toolbox\obj\Debug\Toolbox.dll
 C:\ClassesAndWorkshops\XAML Forms Hands On\Lab Materials\Toolbox\Toolbox\Toolbox\obj\Debug\Toolbox.pdb
 C:\ClassesAndWorkshops\XAML Forms Hands On\Lab Materials\Toolbox\Toolbox\Toolbox\obj\Debug\MeasurementConverter.xaml.g.cs
+C:\ClassesAndWorkshops\XAML Forms Hands On\Lab Materials\Toolbox\Toolbox\Toolbox\obj\Debug\Toolbox.csprojResolveAssemblyReference.cache

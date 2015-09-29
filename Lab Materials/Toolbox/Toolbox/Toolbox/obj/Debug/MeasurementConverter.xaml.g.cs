@@ -16,14 +16,20 @@ namespace Toolbox {
     
     public partial class MeasurementConverter : ContentPage {
         
-        private Picker ConvertFrom;
+        private Picker CfPicker;
         
-        private Picker ConvertTo;
+        private Entry CfEntry;
+        
+        private Picker CtPicker;
+        
+        private Label CtLabel;
         
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(MeasurementConverter));
-            ConvertFrom = this.FindByName<Picker>("ConvertFrom");
-            ConvertTo = this.FindByName<Picker>("ConvertTo");
+            CfPicker = this.FindByName<Picker>("CfPicker");
+            CfEntry = this.FindByName<Entry>("CfEntry");
+            CtPicker = this.FindByName<Picker>("CtPicker");
+            CtLabel = this.FindByName<Label>("CtLabel");
         }
     }
 }

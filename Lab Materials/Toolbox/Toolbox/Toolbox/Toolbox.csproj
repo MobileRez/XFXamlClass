@@ -36,6 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="McLogic.cs" />
     <Compile Include="MeasurementConverter.xaml.cs">
       <DependentUpon>MeasurementConverter.xaml</DependentUpon>
     </Compile>
