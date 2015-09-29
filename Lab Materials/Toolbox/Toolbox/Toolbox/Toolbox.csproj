@@ -36,11 +36,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Helper\ViewModel.cs" />
     <Compile Include="McLogic.cs" />
-    <Compile Include="MeasurementConverter.xaml.cs">
-      <DependentUpon>MeasurementConverter.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\MunitConverterViewModel.cs" />
+    <Compile Include="View\MunitConverter.xaml.cs">
+      <DependentUpon>MunitConverter.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core, Version=1.3.3.0, Culture=neutral, processorArchitecture=MSIL">
@@ -55,8 +58,9 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <EmbeddedResource Include="MeasurementConverter.xaml">
+    <EmbeddedResource Include="View\MunitConverter.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

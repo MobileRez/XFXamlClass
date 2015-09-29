@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Toolbox.View.MunitConverter"
+             Title="Unit Converter"
+             BackgroundColor="#3498db">
+  <StackLayout VerticalOptions="CenterAndExpand" Padding="30" >
+    <Grid HorizontalOptions="Center" >
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+      </Grid.ColumnDefinitions>
+      <Picker x:Name="startPicker" Grid.Row="1" Grid.Column="0" StyleId="StartPicker"
+              HorizontalOptions="FillAndExpand">
+        <Picker.Items>
+          <x:String>Kilometer</x:String>
+          <x:String>Meter</x:String>
+          <x:String>Centimeter</x:String>
+          <x:String>Millimeter</x:String>
+          <x:String>Mile</x:String>
+          <x:String>Yard</x:String>
+          <x:String>Foot</x:String>
+          <x:String>Inch</x:String>
+        </Picker.Items>
+      </Picker>
+      <Entry x:Name="startEntry" Grid.Row="1" Grid.Column="2" StyleId="StartEntry"
+             BackgroundColor="#FFFFFF" TextColor="#000000" Keyboard="Numeric" 
+             HorizontalOptions="FillAndExpand"/>
+      <Picker x:Name="endPicker" Grid.Row="3" Grid.Column="0" StyleId="EndPicker"
+              HorizontalOptions="FillAndExpand">
+        <Picker.Items>
+          <x:String>Kilometer</x:String>
+          <x:String>Meter</x:String>
+          <x:String>Centimeter</x:String>
+          <x:String>Millimeter</x:String>
+          <x:String>Mile</x:String>
+          <x:String>Yard</x:String>
+          <x:String>Foot</x:String>
+          <x:String>Inch</x:String>
+        </Picker.Items>
+      </Picker>
+      <Label x:Name="endLabel" Grid.Row="3" Grid.Column="2" StyleId="EndLabel" XAlign="Center"/>
+    </Grid>
+  </StackLayout>
+</ContentPage>
