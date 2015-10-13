@@ -18,10 +18,25 @@ namespace Toolbox.ViewModel
         Inch
     };
 
-    public class MunitConverterViewModel
+    public class MunitConverterViewModel : Helper.ViewModel
     {
         public Munits CfMunits { get; set; }
         public Munits CtMunits { get; set; }
 
+        private string _convertedMeasurement = string.Empty;
+
+        private string _startingMeasurement = string.Empty;
+
+        public string StartingMeasurement
+        {
+            get { return _startingMeasurement; }
+            set { _convertedMeasurement = value; }
+        }
+
+        private void DoConverstion()
+        {
+            //perform the conversion
+
+        }
     }
 }

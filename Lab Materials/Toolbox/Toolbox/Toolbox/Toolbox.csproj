@@ -36,8 +36,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Helper\MeasurementConverter.cs" />
+    <Compile Include="Helper\MunitToIndexConverter.cs" />
     <Compile Include="Helper\ViewModel.cs" />
-    <Compile Include="McLogic.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\MunitConverterViewModel.cs" />
