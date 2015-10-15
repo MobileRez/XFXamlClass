@@ -8,259 +8,81 @@ namespace Toolbox.Helper
 {
     public static class MeasurementConverter
     {
-        private const float Km = 1;
-        private const float Cm = 1;
-        private const float Mm = 1;
-        private const float Mi = 1;
-        private const float Yd = 1;
-        private const float Ft = 1;
-        private const float In = 1;
+        //use meters as base 
 
-        static double TranslateMeasurement(string startingUnit, string endingUnit, double fromDistance)
+        //put # from start into meters
+
+        //convert meters to ending value
+
+        //public static class DistanceRule
+        //{
+        //     public static Dictionary<DistanceUnit> 
+        //}
+
+        public enum DistanceUnits
         {
-            //translates the measurement
-            //BASE UNIT OF measurement as constants
+            Inch,
+            Foot,
+            Yard,
+            Mile,
+            Millimeter,
+            Centimeter,
+            Meter,
+            Kilometer
+        }
 
-            double toDistance = 0.0;
-            
-
-            switch (startingUnit)
+        public static class Rule
+        {
+            public static Dictionary<DistanceUnits, double> Rules = new Dictionary<DistanceUnits, double>()
             {
-                case "Kilometer":
-                    switch (endingUnit)
-                    {
-                        case "Kilometer":
-                            toDistance = fromDistance;
-                            break;
-                        case "Meter":
-                            toDistance = Math.Round(fromDistance * 1000);
-                            break;
-                        case "Centimeter":
-                            toDistance = Math.Round(fromDistance * 100000);
-                            break;
-                        case "Millimeter":
-                            toDistance = Math.Round(fromDistance * 1000000);
-                            break;
-                        case "Mile":
-                            toDistance = Math.Round(fromDistance / 1.609344);
-                            break;
-                        case "Yard":
-                            toDistance = Math.Round(fromDistance / 0.0009144);
-                            break;
-                        case "Foot":
-                            toDistance = Math.Round(fromDistance / 0.0003048);
-                            break;
-                        case "Inch":
-                            toDistance = Math.Round(fromDistance / 0.0000254);
-                            break;
-                    }
-                    break;
-                case "Meter":
-                    switch (endingUnit)
-                    {
-                        case "Kilometer":
-                            toDistance = Math.Round(fromDistance / 0.001);
-                            break;
-                        case "Meter":
-                            toDistance = fromDistance;
-                            break;
-                        case "Centimeter":
-                            toDistance = Math.Round(fromDistance * 100);
-                            break;
-                        case "Millimeter":
-                            toDistance = Math.Round(fromDistance * 1000);
-                            break;
-                        case "Mile":
-                            toDistance = Math.Round(fromDistance / 1609.344);
-                            break;
-                        case "Yard":
-                            toDistance = Math.Round(fromDistance / 0.9144);
-                            break;
-                        case "Foot":
-                            toDistance = Math.Round(fromDistance / 0.3048);
-                            break;
-                        case "Inch":
-                            toDistance = Math.Round(fromDistance / 0.0254);
-                            break;
-                    }
-                    break;
-                case "Centimeter":
-                    switch (endingUnit)
-                    {
-                        case "Kilometer":
-                            toDistance = Math.Round(fromDistance / 100000);
-                            break;
-                        case "Meter":
-                            toDistance = Math.Round(fromDistance / 100);
-                            break;
-                        case "Centimeter":
-                            toDistance = fromDistance;
-                            break;
-                        case "Millimeter":
-                            toDistance = Math.Round(fromDistance / 10);
-                            break;
-                        case "Mile":
-                            toDistance = Math.Round(fromDistance / 160934.4);
-                            break;
-                        case "Yard":
-                            toDistance = Math.Round(fromDistance / 91.44);
-                            break;
-                        case "Foot":
-                            toDistance = Math.Round(fromDistance / 30.48);
-                            break;
-                        case "Inch":
-                            toDistance = Math.Round(fromDistance / 2.54);
-                            break;
-                    }
-                    break;
-                case "Millimeter":
-                    switch (endingUnit)
-                    {
-                        case "Kilometer":
-                            toDistance = Math.Round(fromDistance / 1000000);
-                            break;
-                        case "Meter":
-                            toDistance = Math.Round(fromDistance / 1000);
-                            break;
-                        case "Centimeter":
-                            toDistance = Math.Round(fromDistance * 10);
-                            break;
-                        case "Millimeter":
-                            toDistance = fromDistance;
-                            break;
-                        case "Mile":
-                            toDistance = Math.Round(fromDistance / 1609344);
-                            break;
-                        case "Yard":
-                            toDistance = Math.Round(fromDistance / 914.4);
-                            break;
-                        case "Foot":
-                            toDistance = Math.Round(fromDistance / 304.8);
-                            break;
-                        case "Inch":
-                            toDistance = Math.Round(fromDistance / 25.4);
-                            break;
-                    }
-                    break;
-                case "Mile":
-                    switch (endingUnit)
-                    {
-                        case "Kilometer":
-                            toDistance = Math.Round(fromDistance * 1.609344);
-                            break;
-                        case "Meter":
-                            toDistance = Math.Round(fromDistance * 1609.344);
-                            break;
-                        case "Centimeter":
-                            toDistance = Math.Round(fromDistance * 160934.4);
-                            break;
-                        case "Millimeter":
-                            toDistance = Math.Round(fromDistance * 1609344);
-                            break;
-                        case "Mile":
-                            toDistance = fromDistance;
-                            break;
-                        case "Yard":
-                            toDistance = Math.Round(fromDistance / 1760);
-                            break;
-                        case "Foot":
-                            toDistance = Math.Round(fromDistance / 5280);
-                            break;
-                        case "Inch":
-                            toDistance = Math.Round(fromDistance / 63360);
-                            break;
-                    }
-                    break;
-                case "Yard":
-                    switch (endingUnit)
-                    {
-                        case "Kilometer":
-                            toDistance = fromDistance;
-                            break;
-                        case "Meter":
-                            toDistance = fromDistance;
-                            break;
-                        case "Centimeter":
-                            toDistance = fromDistance;
-                            break;
-                        case "Millimeter":
-                            toDistance = fromDistance;
-                            break;
-                        case "Mile":
-                            toDistance = fromDistance;
-                            break;
-                        case "Yard":
-                            toDistance = fromDistance;
-                            break;
-                        case "Foot":
-                            toDistance = fromDistance;
-                            break;
-                        case "Inch":
-                            toDistance = fromDistance;
-                            break;
-                    }
-                    break;
-                case "Foot":
-                    switch (endingUnit)
-                    {
-                        case "Kilometer":
-                            toDistance = fromDistance;
-                            break;
-                        case "Meter":
-                            toDistance = fromDistance;
-                            break;
-                        case "Centimeter":
-                            toDistance = fromDistance;
-                            break;
-                        case "Millimeter":
-                            toDistance = fromDistance;
-                            break;
-                        case "Mile":
-                            toDistance = fromDistance;
-                            break;
-                        case "Yard":
-                            toDistance = fromDistance;
-                            break;
-                        case "Foot":
-                            toDistance = fromDistance;
-                            break;
-                        case "Inch":
-                            toDistance = fromDistance;
-                            break;
-                    }
-                    break;
-                case "Inch":
-                    switch (endingUnit)
-                    {
-                        case "Kilometer":
-                            toDistance = fromDistance;
-                            break;
-                        case "Meter":
-                            toDistance = fromDistance;
-                            break;
-                        case "Centimeter":
-                            toDistance = fromDistance;
-                            break;
-                        case "Millimeter":
-                            toDistance = fromDistance;
-                            break;
-                        case "Mile":
-                            toDistance = fromDistance;
-                            break;
-                        case "Yard":
-                            toDistance = fromDistance;
-                            break;
-                        case "Foot":
-                            toDistance = fromDistance;
-                            break;
-                        case "Inch":
-                            toDistance = fromDistance;
-                            break;
-                    }
-                    break;
+                //The values are in respect to 1 meter. 
+                //Ex) 1 meter = 1000 millimeters
+                [DistanceUnits.Millimeter] = 1000,
+                [DistanceUnits.Centimeter] = 100,
+                [DistanceUnits.Meter] = 1,
+                [DistanceUnits.Kilometer] = .001,
+                [DistanceUnits.Inch] = 39.3701,
+                [DistanceUnits.Foot] = 3.28084,
+                [DistanceUnits.Yard] = 1.09361,
+                [DistanceUnits.Mile] = 0.000621371,
+            };
+        }
+
+        public static class UnitConverter
+        {
+            public static double Convert(double valueToConvert, DistanceUnits startUnit, DistanceUnits endUnit)
+            {
+                //value as meters
+                double meterValue = ConvertToMeter(startUnit, valueToConvert);
+                //value as final unit
+                double finalValue = ConvertMeterTo(endUnit, meterValue);
+
+                return Math.Round(finalValue, 2);
             }
-            //toDistance = Math.Round(toDistance, 2);
-            return toDistance;
+
+            private static double ConvertToMeter(DistanceUnits origUnit, double value)
+            {
+                if (Rule.Rules.ContainsKey(origUnit))
+                {
+                    return value/Rule.Rules[origUnit];
+                }
+                else
+                {
+                    throw new Exception("Invalid unit");
+                }
+            }
+
+            private static double ConvertMeterTo(DistanceUnits destUnit, double value)
+            {
+                if (Rule.Rules.ContainsKey(destUnit))
+                {
+                    return value*Rule.Rules[destUnit];
+                }
+                else
+                {
+                    throw new Exception("Invalid unit");
+                }
+            }
         }
     }
 }
