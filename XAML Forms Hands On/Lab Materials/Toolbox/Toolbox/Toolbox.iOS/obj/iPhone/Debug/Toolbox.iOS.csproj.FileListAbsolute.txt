@@ -1,0 +1,13 @@
+C:\ClassesAndWorkshops\XAML Forms Hands On\Lab Materials\Toolbox\Toolbox\Toolbox.iOS\bin\iPhone\Debug\ToolboxiOS.exe
+C:\ClassesAndWorkshops\XAML Forms Hands On\Lab Materials\Toolbox\Toolbox\Toolbox.iOS\bin\iPhone\Debug\ToolboxiOS.pdb
+C:\ClassesAndWorkshops\XAML Forms Hands On\Lab Materials\Toolbox\Toolbox\Toolbox.iOS\bin\iPhone\Debug\Toolbox.dll
+C:\ClassesAndWorkshops\XAML Forms Hands On\Lab Materials\Toolbox\Toolbox\Toolbox.iOS\bin\iPhone\Debug\Xamarin.Forms.Core.dll
+C:\ClassesAndWorkshops\XAML Forms Hands On\Lab Materials\Toolbox\Toolbox\Toolbox.iOS\bin\iPhone\Debug\Xamarin.Forms.Platform.iOS.dll
+C:\ClassesAndWorkshops\XAML Forms Hands On\Lab Materials\Toolbox\Toolbox\Toolbox.iOS\bin\iPhone\Debug\Xamarin.Forms.Xaml.dll
+C:\ClassesAndWorkshops\XAML Forms Hands On\Lab Materials\Toolbox\Toolbox\Toolbox.iOS\bin\iPhone\Debug\Toolbox.pdb
+C:\ClassesAndWorkshops\XAML Forms Hands On\Lab Materials\Toolbox\Toolbox\Toolbox.iOS\bin\iPhone\Debug\Xamarin.Forms.Core.xml
+C:\ClassesAndWorkshops\XAML Forms Hands On\Lab Materials\Toolbox\Toolbox\Toolbox.iOS\bin\iPhone\Debug\Xamarin.Forms.Xaml.xml
+C:\ClassesAndWorkshops\XAML Forms Hands On\Lab Materials\Toolbox\Toolbox\Toolbox.iOS\obj\iPhone\Debug\optimized\
+C:\ClassesAndWorkshops\XAML Forms Hands On\Lab Materials\Toolbox\Toolbox\Toolbox.iOS\obj\iPhone\Debug\Toolbox.iOS.csprojResolveAssemblyReference.cache
+C:\ClassesAndWorkshops\XAML Forms Hands On\Lab Materials\Toolbox\Toolbox\Toolbox.iOS\obj\iPhone\Debug\ToolboxiOS.exe
+C:\ClassesAndWorkshops\XAML Forms Hands On\Lab Materials\Toolbox\Toolbox\Toolbox.iOS\obj\iPhone\Debug\ToolboxiOS.pdb
