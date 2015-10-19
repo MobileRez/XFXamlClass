@@ -16,9 +16,9 @@ namespace Toolbox.View {
     
     public partial class MunitConverter : ContentPage {
         
-        private Picker startPicker;
-        
         private Entry startEntry;
+        
+        private Picker startPicker;
         
         private Picker endPicker;
         
@@ -26,8 +26,8 @@ namespace Toolbox.View {
         
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(MunitConverter));
-            startPicker = this.FindByName<Picker>("startPicker");
             startEntry = this.FindByName<Entry>("startEntry");
+            startPicker = this.FindByName<Picker>("startPicker");
             endPicker = this.FindByName<Picker>("endPicker");
             endLabel = this.FindByName<Label>("endLabel");
         }

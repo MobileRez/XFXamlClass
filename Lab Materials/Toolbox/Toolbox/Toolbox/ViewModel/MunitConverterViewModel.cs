@@ -3,25 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace Toolbox.ViewModel
 {
-    public enum Munits
-    {
-        Kilometer,
-        Meter,
-        Centimeter,
-        Millimeter,
-        Mile,
-        Yard,
-        Foot,
-        Inch
-    };
 
     public class MunitConverterViewModel : Helper.ViewModel
     {
-        public Munits CfMunits { get; set; }
-        public Munits CtMunits { get; set; }
+        //DelegateCommand _conversionCommand;
+
+        //public ICommand _conversionCommand
+        //{
+        //    get { return _convertedCommand; }
+        //}
+        
 
         private string _convertedMeasurement = string.Empty;
 
