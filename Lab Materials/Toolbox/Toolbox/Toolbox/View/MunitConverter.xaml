@@ -31,9 +31,9 @@
       <RowDefinition Height="*" />
     </Grid.RowDefinitions>
 
-    <Entry x:Name="startEntry" Grid.Row="1" StyleId="StartEntry"
-             BackgroundColor="#3498db" Keyboard="Numeric"
-             Placeholder="{StaticResource EnterNumber}" />
+    <Entry Grid.Row="1" BackgroundColor="#3498db" Keyboard="Numeric"
+           Placeholder="{StaticResource EnterNumber}"
+           Text="{Binding StartEntry}"/>
 
     <Picker x:Name="startPicker" Grid.Row="3" StyleId="StartPicker"
             HorizontalOptions="FillAndExpand">
@@ -48,8 +48,8 @@
         <x:String>Inch</x:String>
       </Picker.Items>
     </Picker>
-
-    <Picker x:Name="endPicker" Grid.Row="5"  StyleId="EndPicker"
+    <Label Grid.Row="5" Text="{Binding endLabel}" XAlign="Center"/>
+    <Picker x:Name="endPicker" Grid.Row="7"  StyleId="EndPicker"
             HorizontalOptions="FillAndExpand">
       <Picker.Items>
         <x:String>Kilometer</x:String>
@@ -62,7 +62,6 @@
         <x:String>Inch</x:String>
       </Picker.Items>
     </Picker>
-    <Label x:Name="endLabel" Grid.Row="7" StyleId="EndLabel" XAlign="Center"/>
-    <Button Grid.Row="9" Text="{StaticResource Convert}" ></Button>
+    <Button Grid.Row="9" Text="{StaticResource Convert}" Command="{Binding ConvertCommand}" ></Button>
   </Grid>
 </ContentPage>
