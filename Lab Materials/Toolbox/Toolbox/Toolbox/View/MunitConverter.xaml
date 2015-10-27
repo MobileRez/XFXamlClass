@@ -35,8 +35,8 @@
            Placeholder="{StaticResource EnterNumber}"
            Text="{Binding StartEntry}"/>
 
-    <Picker x:Name="startPicker" Grid.Row="3" StyleId="StartPicker"
-            HorizontalOptions="FillAndExpand">
+    <Picker x:Name="StartPicker" Grid.Row="3" StyleId="StartPicker"
+            HorizontalOptions="FillAndExpand" SelectedIndex="{Binding startUnit, Mode=TwoWay}">
       <Picker.Items>
         <x:String>Kilometer</x:String>
         <x:String>Meter</x:String>
@@ -48,9 +48,9 @@
         <x:String>Inch</x:String>
       </Picker.Items>
     </Picker>
-    <Label Grid.Row="5" Text="{Binding endLabel}" XAlign="Center"/>
-    <Picker x:Name="endPicker" Grid.Row="7"  StyleId="EndPicker"
-            HorizontalOptions="FillAndExpand">
+    <Label Grid.Row="5" Text="{Binding ConvertedMeasurement}" XAlign="Center"/>
+    <Picker x:Name="EndPicker" Grid.Row="7"  StyleId="EndPicker"
+            HorizontalOptions="FillAndExpand" SelectedIndex="{Binding endUnit , Mode=TwoWay}">
       <Picker.Items>
         <x:String>Kilometer</x:String>
         <x:String>Meter</x:String>
@@ -62,6 +62,6 @@
         <x:String>Inch</x:String>
       </Picker.Items>
     </Picker>
-    <Button Grid.Row="9" Text="{StaticResource Convert}" Command="{Binding ConvertCommand}" ></Button>
+    <Button Grid.Row="9" Text="{StaticResource Convert}" Command="{Binding DoConvertCommand}" ></Button>
   </Grid>
 </ContentPage>

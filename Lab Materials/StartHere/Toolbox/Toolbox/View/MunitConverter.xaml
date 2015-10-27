@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Toolbox.View.MunitConverter">
+
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <x:String x:Key="Convert">Convert!</x:String>
+      <x:String x:Key="EntryPlacholder">Enter Number</x:String>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    <Entry Grid.Row="1" Placeholder="{StaticResource EntryPlacholder}" ></Entry>
+    <Picker Grid.Row="3">
+        <Picker.Items>
+        <x:String>Kilometer</x:String>
+        <x:String>Meter</x:String>
+        <x:String>Centimeter</x:String>
+        <x:String>Millimeter</x:String>
+        <x:String>Mile</x:String>
+        <x:String>Yard</x:String>
+        <x:String>Foot</x:String>
+        <x:String>Inch</x:String>
+      </Picker.Items>
+    </Picker>
+    <Label Grid.Row="5"/>
+    <Picker Grid.Row="7">
+      <Picker.Items>
+        <x:String>Kilometer</x:String>
+        <x:String>Meter</x:String>
+        <x:String>Centimeter</x:String>
+        <x:String>Millimeter</x:String>
+        <x:String>Mile</x:String>
+        <x:String>Yard</x:String>
+        <x:String>Foot</x:String>
+        <x:String>Inch</x:String>
+      </Picker.Items>
+    </Picker>
+    <Button Grid.Row="9" Text="{StaticResource Convert}" Command="{Binding ConvertCommand}"></Button>
+  </Grid>
+</ContentPage>

@@ -4,19 +4,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using Phoneword.Core;
+using Toolbox.Helper;
+using Xamarin.Forms;
 
 namespace Toolbox.ViewModel
 {
+    public enum Munits
+    {
+        Kilometer,
+        Meter,
+        Centimeter,
+        Millimeter,
+        Mile,
+        Yard,
+        Foot,
+        Inch
+    }
 
     public class MunitConverterViewModel : Helper.ViewModel
     {
-        DelegateCommand _convertCommand;
 
-        public ICommand ConvertCommand
-        {
-            get {return _convertCommand; }
-        }
+        public ICommand DoConvertCommand { get; set; }
+
 
         private string _startingMeasurement = string.Empty;
 
@@ -29,28 +38,31 @@ namespace Toolbox.ViewModel
                 {
                     _startingMeasurement = value;
                     RaisePropertyChanged("StartEntry");
-                    _convertCommand.RaiseCanExecuteChanged();
+                    
                 }
             }
         }
 
         private string _convertedMeasurement = string.Empty;
+        private int _startUnit;
+        private int _endUnit;
 
         public string ConvertedMeasurement
         {
             get { return _convertedMeasurement; }
-            set {
+            set
+            {
                 if (_convertedMeasurement != value)
                 {
                     _convertedMeasurement = value;
-                    RaisePropertyChanged(ConvertedMeasurement);
+                    RaisePropertyChanged();
                 }
             }
         }
 
         public MunitConverterViewModel()
         {
-            _convertCommand = new DelegateCommand(DoConverstion, () => !String.IsNullOrEmpty(StartEntry));
+            DoConvertCommand = new Command(DoConverstion);
         }
 
 
@@ -60,11 +72,44 @@ namespace Toolbox.ViewModel
             set { _convertedMeasurement = value; }
         }
 
+        public int StartUnit
+        {
+            get { return _startUnit; }
+            set
+            {
+                if (value == _startUnit)
+                    return;
+
+                _startUnit = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        public int EndUnit
+
+        {
+            get { return _endUnit; }
+            set
+            {
+                if (value == _endUnit)
+                    return;
+
+
+                    _endUnit = value;
+                RaisePropertyChanged();
+            }
+        }
+
+
         private void DoConverstion()
         {
             //perform the conversion
-            ConvertedMeasurement = 
 
+            double result;
+            result = MeasurementConverter.UnitConverter.Convert(Convert.ToDouble(StartingMeasurement), (MeasurementConverter.DistanceUnits) StartUnit,
+                (MeasurementConverter.DistanceUnits) EndUnit);
+
+            ConvertedMeasurement = result.ToString();
         }
     }
 }
