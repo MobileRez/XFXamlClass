@@ -36,7 +36,7 @@
            Text="{Binding StartEntry}"/>
 
     <Picker x:Name="StartPicker" Grid.Row="3" StyleId="StartPicker"
-            HorizontalOptions="FillAndExpand" SelectedIndex="{Binding startUnit, Mode=TwoWay}">
+            HorizontalOptions="FillAndExpand" SelectedIndex="{Binding StartUnit, Mode=TwoWay}">
       <Picker.Items>
         <x:String>Kilometer</x:String>
         <x:String>Meter</x:String>
@@ -50,7 +50,7 @@
     </Picker>
     <Label Grid.Row="5" Text="{Binding ConvertedMeasurement}" XAlign="Center"/>
     <Picker x:Name="EndPicker" Grid.Row="7"  StyleId="EndPicker"
-            HorizontalOptions="FillAndExpand" SelectedIndex="{Binding endUnit , Mode=TwoWay}">
+            HorizontalOptions="FillAndExpand" SelectedIndex="{Binding EndUnit , Mode=TwoWay}">
       <Picker.Items>
         <x:String>Kilometer</x:String>
         <x:String>Meter</x:String>

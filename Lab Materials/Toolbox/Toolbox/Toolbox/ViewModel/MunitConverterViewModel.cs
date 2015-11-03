@@ -106,6 +106,7 @@ namespace Toolbox.ViewModel
             //perform the conversion
 
             double result;
+
             result = MeasurementConverter.UnitConverter.Convert(Convert.ToDouble(StartingMeasurement), (MeasurementConverter.DistanceUnits) StartUnit,
                 (MeasurementConverter.DistanceUnits) EndUnit);
 
