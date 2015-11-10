@@ -12,7 +12,7 @@ namespace Toolbox
         public App()
         {
             // The root page of your application
-            
+            MainPage = new MunitConverter();
         }
 
         protected override void OnStart()

@@ -21,14 +21,14 @@ namespace Toolbox.Helper
 
         public enum DistanceUnits
         {
-            Inch,
-            Foot,
-            Yard,
-            Mile,
-            Millimeter,
-            Centimeter,
+            Kilometer,
             Meter,
-            Kilometer
+            Centimeter,
+            Millimeter,
+            Mile,
+            Yard,
+            Foot,
+            Inch
         }
 
         public static class Rule
@@ -64,7 +64,7 @@ namespace Toolbox.Helper
             {
                 if (Rule.Rules.ContainsKey(origUnit))
                 {
-                    return value/Rule.Rules[origUnit];
+                    return value / Rule.Rules[origUnit];
                 }
                 else
                 {
@@ -76,7 +76,7 @@ namespace Toolbox.Helper
             {
                 if (Rule.Rules.ContainsKey(destUnit))
                 {
-                    return value*Rule.Rules[destUnit];
+                    return value * Rule.Rules[destUnit];
                 }
                 else
                 {
