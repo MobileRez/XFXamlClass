@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeasurementConverter.View.MunitConverter"
+             Title="Unit Converter"
+             Style="{StaticResource BaseStyle}">
+
+  <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness"
+                iOS="0, 20, 0, 0" />
+  </ContentPage.Padding>
+
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+
+    <Entry Grid.Row="1" BackgroundColor="#3498db" Keyboard="Numeric"
+           Placeholder="{StaticResource EnterNumber}"
+           Text="{Binding StartEntry}"/>
+
+    <Picker x:Name="StartPicker" Grid.Row="3" StyleId="StartPicker"
+            HorizontalOptions="FillAndExpand" SelectedIndex="{Binding StartUnit, Mode=TwoWay}">
+      <Picker.Items>
+        <x:String>Kilometer</x:String>
+        <x:String>Meter</x:String>
+        <x:String>Centimeter</x:String>
+        <x:String>Millimeter</x:String>
+        <x:String>Mile</x:String>
+        <x:String>Yard</x:String>
+        <x:String>Foot</x:String>
+        <x:String>Inch</x:String>
+      </Picker.Items>
+    </Picker>
+    <Label Grid.Row="5" Text="{Binding ConvertedMeasurement}" XAlign="Center"/>
+    <Picker x:Name="EndPicker" Grid.Row="7"  StyleId="EndPicker"
+            HorizontalOptions="FillAndExpand" SelectedIndex="{Binding EndUnit , Mode=TwoWay}">
+      <Picker.Items>
+        <x:String>Kilometer</x:String>
+        <x:String>Meter</x:String>
+        <x:String>Centimeter</x:String>
+        <x:String>Millimeter</x:String>
+        <x:String>Mile</x:String>
+        <x:String>Yard</x:String>
+        <x:String>Foot</x:String>
+        <x:String>Inch</x:String>
+      </Picker.Items>
+    </Picker>
+    <Button Grid.Row="9" Text="{StaticResource Convert}" Command="{Binding DoConvertCommand}" ></Button>
+  </Grid>
+</ContentPage>

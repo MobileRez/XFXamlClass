@@ -1,0 +1,22 @@
+﻿<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeasurementConverter.App">
+  <Application.Resources>
+    <ResourceDictionary>
+      <!--Text-->
+      <x:String x:Key="Convert">Convert!</x:String>
+      <x:String x:Key="EnterNumber">Enter Number</x:String>
+      
+      <!--Color-->
+      <Color x:Key="AppBground">#3498db</Color>
+      
+      <!--Styles-->
+      <Style x:Key="BaseStyle" TargetType="VisualElement">
+        <Setter Property="BackgroundColor" Value="{StaticResource AppBground} "/>
+
+      </Style>
+
+    </ResourceDictionary>
+  </Application.Resources>
+
+</Application>
