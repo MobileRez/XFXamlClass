@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+    <title>Xamarin Forms + XAML Lab</title>
+    <script type="text/javascript">
+        function showhide(id) {
+            var e = document.getElementById(id);
+            e.style.display = (e.style.display == 'block') ? 'none' : 'block';
+        }
+    </script>
+    <link rel="stylesheet" type="text/css" href="./res/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="./res/css/bootstrap-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="./res/css/styles.css" />
+</head>
+
+<body>
+
+    <header>Getting Hands-On XAML & Xamarin.Forms</header>
+    <section id="main">
+
+        <h1>Steps</h1>
+        <h2>Open the Starter Solution</h2>
+        <ol>
+            <li>
+                Open <b>MeasurementConverter.sln</b> solution in the <b>Part 1/Start</b> folder.
+                This solution contains 6 parts MeasurementConverter(Portable), MeasurementConverter.Droid,
+                MeasurementConverter.iOS, MeasurementConverter.UWP(Universal Windows), MeasurementConverter.Windows(Windows 8.1)
+                & MeasurementConverter.WinPhone(Windows Phone 8.1).
+            </li>
+        </ol>
+        <h2>Adding a new XAML file</h2>
+        <ol>
+            <li>
+                Add a new XAML File to the View folder. To do this, select the View folder in the
+                MeasurementConverter(Portable) project. Go to <b><i>Project > Add New Item</i></b> and look for Forms XAML
+            </li>
+            <li>
+                Next enter the name for this new XAML file as <b>MunitConverter</b>
+            </li>
+            <li>
+                Click Add to add the XAML file to the project
+            </li>
+            <li>
+                Open app.xaml.cs. Inside you will find the  code: <code>MainPage = new MunitConverter();</code>.
+                When your app starts up, this code creates a new instance of the MunitConverter page, this is also
+                the page that you see displayed when the app loads.
+            </li>
+        </ol>
+        <h2>Adding content to the XAML file</h2>
+        <p>
+            Now that we have our app set up and pointing at our starter page, we will need to create our UI and link up
+            the code behind with the XAML UI.
+        </p>
+        <ol>
+            <li>
+                Inside the content page there is a label that was created when we created the file. We can delete
+                that as we will be replacing that with code later.
+            </li>
+            <li>
+                Inside the ContentPage tag, set the content pages padded for iPhone to have a top of 20.<br/>
+            </li>
+            <!-- objectelement=grid.rowdefs is "brown" #A52A2A
+            propertyattributes=x:typeArugments is Red #FF0000
+            value=Thickness is blue #0000FF
+            x is Green # #008000--->
+            <div id="onplatformcode" style="display: none;">
+                <pre>
+<span class="octags">&lt;</span><span class="objel">ContentPage.Padding</span><span class="octags">></span>
+    <span class="octags">&lt;</span><span class="objel">OnPlatform</span><span class="xattrib"> x</span><span class="propattrib">:TypeArguments</span><span class="octags">=</span>"<span class="octags">Thickness</span>"<span></span> 
+                    <span class="propattrib">iOS</span><span class="octags">=</span>"<span class="octags">0, 20, 0, 0</span>"<span class="octags">/></span>
+<span class="octags">&lt;/</span><span class="objel">ContentPage.Padding</span><span class="octags">></span>
+                </pre>
+            </div>
+            <a href="javascript:showhide('onplatformcode')">
+                Click to show/hide.
+            </a>
+            <li>
+                Add a grid tag inside the Content page, just below the padding tags. This will be where we add the 
+                rest of the layout code.
+            </li>
+            <li>
+                Inside the grid tag, add code to set the row height definitions and set the value to *.
+                You will need 10 of them.
+            </li>
+            <div id="gridcode" style="display: none;">
+                <pre>
+    <span class="octags">&lt;</span><span class="objel">Grid</span><span class="octags">></span>
+        <span class="octags">&lt;</span><span class="objel">Grid.RowDefinitions</span><span class="octags">></span>
+            <span class="octags">&lt;</span><span class="objel">RowDefinition </span><span class="propattrib">Height</span><span class="octags">=</span>"<span class="octags">*</span>"<span class="octags"> /></span>
+            <span class="octags">&lt;</span><span class="objel">RowDefinition </span><span class="propattrib">Height</span><span class="octags">=</span>"<span class="octags">*</span>"<span class="octags"> /></span>
+            <span class="octags">&lt;</span><span class="objel">RowDefinition </span><span class="propattrib">Height</span><span class="octags">=</span>"<span class="octags">*</span>"<span class="octags"> /></span>
+            <span class="octags">&lt;</span><span class="objel">RowDefinition </span><span class="propattrib">Height</span><span class="octags">=</span>"<span class="octags">*</span>"<span class="octags"> /></span>
+            <span class="octags">&lt;</span><span class="objel">RowDefinition </span><span class="propattrib">Height</span><span class="octags">=</span>"<span class="octags">*</span>"<span class="octags"> /></span>
+            <span class="octags">&lt;</span><span class="objel">RowDefinition </span><span class="propattrib">Height</span><span class="octags">=</span>"<span class="octags">*</span>"<span class="octags"> /></span>
+            <span class="octags">&lt;</span><span class="objel">RowDefinition </span><span class="propattrib">Height</span><span class="octags">=</span>"<span class="octags">*</span>"<span class="octags"> /></span>
+            <span class="octags">&lt;</span><span class="objel">RowDefinition </span><span class="propattrib">Height</span><span class="octags">=</span>"<span class="octags">*</span>"<span class="octags"> /></span>
+            <span class="octags">&lt;</span><span class="objel">RowDefinition </span><span class="propattrib">Height</span><span class="octags">=</span>"<span class="octags">*</span>"<span class="octags"> /></span>
+            <span class="octags">&lt;</span><span class="objel">RowDefinition </span><span class="propattrib">Height</span><span class="octags">=</span>"<span class="octags">*</span>"<span class="octags"> /></span>
+        <span class="octags">&lt;/</span><span class="objel">Grid.RowDefinitions</span><span class="octags">></span>
+    ...
+    
+    <span class="octags">&lt;/</span><span class="objel">Grid</span><span class="octags">></span>
+</pre>
+            </div>
+            <a href="javascript:showhide('gridcode')">
+                Click to show/hide.
+            </a>
+            <li>Next create the needed UI elementes or "Views" in the following order: Entry, Picker, Label, Picker and Button.</li>
+            <li>In each view, a <code>Grid.Row</code> property attribute and set the value to the number the view is in the list. Entry should be 1, the first picker is 3, label is 5, seccond picker is 7, and the button is 9.</li>
+            <li>
+                Both Pickers need to be populated with the following items in order. Kilometer, Meter, Centimeter, Milimeter, Mile, Yard, Foot, Inch.
+            </li>
+            <div id="pickercode" style="display: none;">
+                <pre>
+        <span class="octags">&lt;</span><span class="objel">Picker.Items</span><span class="octags">></span>
+            <span class="octags">&lt;</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>Kilometer<span class="octags">&lt;/</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>
+            <span class="octags">&lt;</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>Meter<span class="octags">&lt;/</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>
+            <span class="octags">&lt;</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>Centimeter<span class="octags">&lt;/</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>
+            <span class="octags">&lt;</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>Millimeter<span class="octags">&lt;/</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>
+            <span class="octags">&lt;</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>Mile<span class="octags">&lt;/</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>
+            <span class="octags">&lt;</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>Yard<span class="octags">&lt;/</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>
+            <span class="octags">&lt;</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>Foot<span class="octags">&lt;/</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>
+            <span class="octags">&lt;</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>Inch<span class="octags">&lt;/</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>
+        <span class="octags">&lt;/</span><span class="objel">Picker.Items</span><span class="octags">></span>
+                    </pre>
+            </div>
+            <a href="javascript:showhide('pickercode')">
+                Click to show/hide.
+            </a>
+            <li>
+                On the entry, add code for Setting the keyboard that gets displayed with the entry is active to Numeric, Placeholder text
+                to <b>Enter Number</b>, and set a text value with a binding of <code>StartEntry</code> .
+            </li>
+            <li>
+                Set the binding of the first picker on <b>SelectedIndex</b> as <code>StartingUnit</code> set the mode to <b>TwoWay</b> and a
+                <b>StyleId</b> of <code>StartPicker</code>. On the seccond picker set the binding of <b>SelectedIndex</b> as
+                <code>EndUnit</code>, set the mode to <b>TwoWay</b> and add a <b>StyleId</b> of <code>EndPicker</code>.
+            </li>
+            <li>
+                On the Label, set the binding on its Text to <code>ConvertedMeasurement</code> and set 
+                <b>HorizontalTextAlignment</b> to <code>Center</code>
+            </li>
+            <li>
+                On the button, set the <b>text</b> value to <code>Convert</code> and the binding of its <b>Command</b> to <code>DoConvertCommand</code>.
+            </li>
+            <div id="munitconvertxamlviews" style="display: none;">
+                <pre>
+    <span class="octags">&lt;</span><span class="objel">Entry </span><span class="propattrib">Grid.Row</span><span class="octags">=</span>"<span class="octags">1</span>" <span class="propattrib">Keyboard</span><span class="octags">=</span>"<span class="octags">Numeric</span>" <span class="propattrib">Placeholder</span><span class="octags">=</span>"<span class="octags">Enter Number</span>" <span class="propattrib">Text</span><span class="octags">=</span>"<span class="octags">{Binding StartEntry}</span>"<span class="octags"> /></span>
+    <span class="octags">&lt;</span><span class="objel">Picker </span><span class="propattrib">Grid.Row</span><span class="octags">=</span>"<span class="octags">3</span>" <span class="propattrib">StyleId</span><span class="octags">=</span>"<span class="octags">StartPicker</span>" <span class="propattrib">SelectedIndex</span><span class="octags">=</span>"<span class="octags">{Binding StartUnit, Mode=TwoWay}</span>"<span class="octags">></span>
+        <span class="octags">&lt;</span><span class="objel">Picker.Items</span><span class="octags">></span>
+            <span class="octags">&lt;</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>Kilometer<span class="octags">&lt;/</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>
+            <span class="octags">&lt;</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>Meter<span class="octags">&lt;/</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>
+            <span class="octags">&lt;</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>Centimeter<span class="octags">&lt;/</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>
+            <span class="octags">&lt;</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>Millimeter<span class="octags">&lt;/</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>
+            <span class="octags">&lt;</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>Mile<span class="octags">&lt;/</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>
+            <span class="octags">&lt;</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>Yard<span class="octags">&lt;/</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>
+            <span class="octags">&lt;</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>Foot<span class="octags">&lt;/</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>
+            <span class="octags">&lt;</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>Inch<span class="octags">&lt;/</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>
+        <span class="octags">&lt;/</span><span class="objel">Picker.Items</span><span class="octags">></span>
+    <span class="octags">&lt;/</span><span class="objel">Picker</span><span class="octags">></span>
+    <span class="octags">&lt;</span><span class="objel">Label </span><span class="propattrib">Grid.Row</span><span class="octags">=</span>"<span class="octags">5</span>" <span class="propattrib">Text</span><span class="octags">=</span>"<span class="octags">{Binding ConvertedMeasurement}</span>" <span class="propattrib">HorizontalTextAlignment</span><span class="octags">=</span>"<span class="octags">Center</span>"<span class="octags"> /></span>
+    <span class="octags">&lt;</span><span class="objel">Picker </span><span class="propattrib">Grid.Row</span><span class="octags">=</span>"<span class="octags">7</span>" <span class="propattrib">StyleId</span><span class="octags">=</span>"<span class="octags">EndPicker</span>" <span class="propattrib">SelectedIndex</span><span class="octags">=</span>"<span class="octags">{Binding EndUnit , Mode=TwoWay}</span>"<span class="octags">></span>
+        <span class="octags">&lt;</span><span class="objel">Picker.Items</span><span class="octags">></span>
+            <span class="octags">&lt;</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>Kilometer<span class="octags">&lt;/</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>
+            <span class="octags">&lt;</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>Meter<span class="octags">&lt;/</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>
+            <span class="octags">&lt;</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>Centimeter<span class="octags">&lt;/</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>
+            <span class="octags">&lt;</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>Millimeter<span class="octags">&lt;/</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>
+            <span class="octags">&lt;</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>Mile<span class="octags">&lt;/</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>
+            <span class="octags">&lt;</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>Yard<span class="octags">&lt;/</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>
+            <span class="octags">&lt;</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>Foot<span class="octags">&lt;/</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>
+            <span class="octags">&lt;</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>Inch<span class="octags">&lt;/</span><span class="xattrib">x</span><span class="objel">:String</span><span class="octags">></span>
+        <span class="octags">&lt;/</span><span class="objel">Picker.Items</span><span class="octags">></span>
+    <span class="octags">&lt;/</span><span class="objel">Picker</span><span class="octags">></span>
+    <span class="octags">&lt;</span><span class="objel">Button </span><span class="propattrib">Grid.Row</span><span class="octags">=</span>"<span class="octags">9</span>" <span class="propattrib">Text</span><span class="octags">=</span>"<span class="octags">Convert!</span>" <span class="propattrib">Command</span><span class="octags">=</span>"<span class="octags">{Binding DoConvertCommand}</span>"<span class="octags"> /></span>
+</pre>
+            </div>
+            <a href="javascript:showhide('munitconvertxamlviews')">
+                Click to show/hide.
+            </a>
+            <li>
+                Open the file MunitConverter.xaml.cs.
+            </li>
+            <li>
+                Here in the MunitConverter class we will set: <code>BindingContext = new MunitConverterViewModel();</code>. This creates
+                a new instance of MunitConverterViewModel and ties together the View and the View Model.
+            </li>
+            <br/>
+            <p>
+                With the following code set up, we now have the view configured to work with the view model.
+                To see the full extent of how the code is working with the View and View Model look at <b>MunitConverterViewModel.cs</b>
+                in the View Model Folder and<b>UnitConverter.cs</b> file to see how the conversion takes place and reveal the secret to
+                converting distances.
+            </p>
+        </ol>
+        <h2>Bonus: create resources in the globabl ResourceDictionary and add to the View</h2>
+        <p>This is a bonus section to do that shows you how to add a style to your XAML and set up a global 
+        resource dictionary.</p>
+        <ol>
+            <li>
+                Open the <code>App.xaml</code> file located in the MeasurementConverter Portable Class Library.
+            </li>
+            <li>
+                Inside the <b>ResourceDictionary</b> is where we will be adding our values to consume on the MunitConverterView.
+                You can use these on other views as well since we are adding the values to the Global Resource Dictionary.
+                Start by adding 2 string tags one with the value of <code>Convert!</code>" and another with the value of
+                <code>EnterNumber</code>.
+            </li>
+            <li>
+                Next create the Style. Since this will be the base style for the app, give it a <b>x:Key</b> of
+                <code>BaseStyle</code>, and a <b>TargetType</b> of <code>VisualElement</code>.
+            </li>
+            <li>
+                Now that the style is set up, the values we want to set in this style can be coded. To do this create a
+                Setter tag inside the Style tag with a <b>Property</b> of <code>BackgroundColor</code> and a
+                <b>Value</b> with a <b>StaticResource</b> of <code>#3498db</code>.
+            </li>
+            <!--code here-->
+        </ol>
+        <h2>Bonus: Applying Global Resources to view</h2>
+        <ol>
+            <li>
+                Open the MunitConverter.xaml
+            </li>
+            <li>
+                In the ContentPage tag, add a style with the value <b>StaticResource</b> of <code>BaseStyle</code>. 
+                This will link the style we defined for the app to help apply values across multiple views on our app.
+            </li>
+            <li>
+                On the Entry tag, change the value of the <b>Placeholder</b> to be the <b>StaticResource</b> of 
+                <code>EnterNumber</code>. 
+            </li>
+            <li>
+                On the Button Tag, we wat to change the value of Text to the <b>StaticResource</b> of 
+                <code>Convert</code>.
+            </li>
+        </ol>
+        <h2>Final Thoughts</h2>
+        <p>
+            This lab gives you a rough idea about using Xamairn.Forms, XAML, Styles, & Databinding. This lab is by no
+            means perfect or the ?best? way to set up a view, but is intended to show how the different parts of a XAML 
+            File works and behaves. Some things to think about:
+        </p>
+        <p>
+            Why would the grid layout not be the best way to set up this layout?
+        </p>
+        <p>
+            How could you do this differently?
+        </p>
+        <p>
+            What other things need to be worried about when dealing with mobile that could be added before this app 
+            would be ?published??
+        </p>
+        <p>
+            If you want to learn more about Xamairn.Forms, XAML, & DataBinding I recommend reading Creating Mobile Apps 
+            With Xamarin Forms by Charles Petzoid.
+        </p>
+    </section>
+    <script src="./res/js/jquery.min.js"></script>
+    <script src="./res/js/bootstrap.min.js"></script>
+</body>
+</html>
